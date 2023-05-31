@@ -9,3 +9,6 @@ Die Battles haben alle eine Battle-Nummer, über die sie leicht aufgerufen werde
 
 ## resultat
 Die Daten werden in eine JSON-Datei geschrieben. Jedes JSON-Objekt entspricht einem einzelnen Battle und hat die Werte "Rapper1", "Rapper2" und "Link". Denen sind dann entsprechend die Namen der am Battle beteiligten Artists und den dazugehörigen Link als String zugeordnet.
+
+## ausführen
+Der Code kann mit `go run rba-scraper.go` über die Kommandozeile ausgeführt werden. Die JSON-Datei wird im Ordner der GO-Datei unter dem Namen _rba.json_ gespeichert und überschreibt eine ggfs. bereits bestehende Datei mit diesem Namen. Da über 80000 (in Worten: achtzigtausend) Battles durchsucht werden, dauert das Ausführen wirklich lange (bei mir ca. anderthalb Stunden). Während der Ausführung werden alle Battles auch auf die Kommandozeile ausgegeben und erst am Schluss wird die JSON-Datei tatsächlich geschrieben. Bei Abbruch der Ausführung kann es also vorkommen, dass gar nichts in eine Datei geschrieben wird.
