@@ -63,16 +63,23 @@ func addToSlice(battle Battle, slice []Battle, i int) []Battle {
 		return slice
 	}
 
-	//	ist einer der beiden Rapper als "R-I-P No. X" aufgeführt (vermutlich wegen Löschung des RBA-Kontos), wird das Battle übersprungen
-	if strings.Contains(battle.Rapper1, "R-I-P No.") || strings.Contains(battle.Rapper2, "R-I-P No.") {
-		return slice
-	}
+	/*
 
-	//	alternative Schreibweise für gelöschte Kontos ist "RIPX" mit X als Zahl, auch diese Battles werden übersprungen
-	//	möglicherweise werden hier auch tatsächlich existierende Artists übersprungen, aber das wird einfach in Kauf genommen
-	if strings.HasPrefix(battle.Rapper1, "RIP") || strings.HasPrefix(battle.Rapper2, "RIP") {
-		return slice
-	}
+		//	BEI BEDARF KÖNNEN BATTLES, IN DENEN MINDESTENS EINER DER RAPPER SEIN RBA-KONTO GELÖSCHT HAT, ÜBERSPRUNGEN WERDEN
+		//	-> DAFÜR DEN KOMMENTAR UM DIESEN ABSCHNITT ENTFERNEN (ZEILE 66 UND ZEILE 82)
+
+		//	ist einer der beiden Rapper als "R-I-P No. X" aufgeführt (vermutlich wegen Löschung des RBA-Kontos), wird das Battle übersprungen
+		if strings.Contains(battle.Rapper1, "R-I-P No.") || strings.Contains(battle.Rapper2, "R-I-P No.") {
+			return slice
+		}
+
+		//	alternative Schreibweise für gelöschte Kontos ist "RIPX" mit X als Zahl, auch diese Battles werden übersprungen
+		//	möglicherweise werden hier auch tatsächlich existierende Artists übersprungen, aber das wird einfach in Kauf genommen
+		if strings.HasPrefix(battle.Rapper1, "RIP") || strings.HasPrefix(battle.Rapper2, "RIP") {
+			return slice
+		}
+
+	*/
 
 	//	die Battle-Nummer und die beiden Artists werden auf die Konsole ausgegeben
 	fmt.Printf("%v: %v vs. %v\n", i, battle.Rapper1, battle.Rapper2)
