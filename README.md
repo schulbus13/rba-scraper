@@ -2,7 +2,7 @@
 erfasse Informationen zu allen Battles der RBA in einer JSON-Datei
 
 ## idee
-Von allen rund 86.000 Battles, die in der [RBA](https://www.r-b-a.de) stattgefunden haben, werden die Namen der beiden Parteien (Rapper bzw. Teams) und der Link zum Battle in einer JSON-Datei abgelegt.
+Von allen rund 80.000 Battles, die in der [RBA](https://www.r-b-a.de) stattgefunden haben, werden die Namen der beiden Parteien (Rapper bzw. Teams) und der Link zum Battle in einer JSON-Datei abgelegt.
 
 ## vorgehen
 Die Battles sind durchnummeriert, so dass jedes Battle mittels Loop adressiert werden kann. Auf jeder dazugehörigen Seite befinden sich dann zwei h2-Elemente, von denen eines die benötigten Informationen zu den Artists enthält. Da die Seiten automatisch generiert werden, ist der entsprechende String leicht zu splitten.
